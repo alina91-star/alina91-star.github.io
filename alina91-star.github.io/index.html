@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <!--Head-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>Alina-Maria Barbuta</title>
+        <link rel="stylesheet" type="text/css" href="stylesheet/portfolio.css">
+    </head>
+
+    <!--Body-->
+    <body class="Background">
+        
+        <!--Navbar-->
+        <div class="Navbar">
+            <a class="active" href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">GitHub</a>
+            <a href="#Contact">Contact</a>
+        </div>
+
+        <!--Breaks inserted to add space between navbar and the first heading-->
+        <br><br>
+
+        <!--Background video-->
+        <div id="Home">
+            <video autoplay muted loop id="Typing_Video">
+                <source src="https://videos.pexels.com/video-files/856190/856190-hd_1280_720_25fps.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+
+        <!--Video text-->
+        <div class="Video_Text">
+            <h1 class="white-text">Alina-Maria Barbuta's Portfolio</h1>
+            <strong>
+                <p class="center">
+                    <q>Code is my way of turning imagination into reality.</q>
+                    <br><br> My name is Alina-Maria Barbuta. Welcome to my portfolio website, where I share my background and experience as a developer.
+                    <br><br> Thank you for visiting and enjoy exploring my work! 
+                </p>
+            </strong>
+        </div>
+
+        <!--About section-->
+        <div class="Row" id="About">
+            <!--Left column-->
+            <div class="Column_2">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML5 logo">
+            </div>
+            <!--Right column-->
+            <div class="Column_1">
+                <h1>About</h1>
+                <p>
+                    I am a passionate software developer who loves to create beautiful and functional web applications. 
+                    <br><br>I am also a proud mother of two wonderful children, which inspires me to balance creativity, patience, and problem-solving both in life and in code.
+                    <br><br>I graduated from <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a> Software Developer Boot Camp and I am trained in HTML, CSS, JavaScript, SQL, and C#.
+                    <br><br>I am a full-stack developer and would love to collaborate with you on your next project. <a href="#Contact">Contact me</a> below!
+                </p>
+            </div>
+        </div>
+
+        <!--GitHub section-->
+        <div class="Row" id="GitHub">
+            <!--Left column-->
+            <div class="Column_1">
+                <h1>GitHub</h1>
+                <p>
+                    You can view my coding projects on my GitHub profile here:
+                    <br>
+                    <p class="center"><a href="https://github.com/alina91-star" target="_blank">Visit my GitHub Profile</a></p>
+                </p>
+            </div>
+            <!--Right column-->
+            <div class="Column_2">
+                <a href="https://github.com/alina91-star" target="_blank">
+                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo">
+                </a>
+            </div>
+        </div>
+
+        <!--Contact section-->
+        <div class="Row" id="Contact">
+            <!--Contact image, left column-->
+            <div class="Column_2 Column_tall">
+                <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Contact Icon">
+            </div>
+            <!--Contact form, right column-->
+            <div class="Column_1 Column_tall">
+                <h1>Contact</h1>
+                <form action="" method="POST">
+                    <label>Name:</label>
+                        <input type="text" name="Name" placeholder="Please enter your name here" required>
+                    <label>Email:</label>
+                        <input type="email" id="Email" name="Email" placeholder="Please enter your email here" required>
+                    <label>Message:</label>
+                        <textarea id="Message" name="Message" placeholder="Please write your message here" required></textarea>
+                    <input type="submit" value="SUBMIT">
+                </form>
+            </div>
+        </div>
+
+        <!--Footer section-->
+        <footer>
+            <p class="center">&copy; 2025 Alina-Maria Barbuta | <a href="https://github.com/alina91-star" target="_blank">GitHub</a></p>
+        </footer>
+    </body>
+</html>
