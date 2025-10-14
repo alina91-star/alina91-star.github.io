@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Alina-Maria Barbuta</title>
+  <link rel="stylesheet" href="stylesheet/style.css" />
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="Navbar">
+    <a class="active" href="#Home">Home</a>
+    <a href="#About">About</a>
+    <a href="#GitHub">GitHub</a>
+    <a href="#Contact">Contact</a>
+  </div>
+
+  <!-- Background Video -->
+  <div class="video-container" id="Home">
+    <video autoplay muted loop playsinline id="bg-video">
+      <source src="video/background.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Text Overlay -->
+    <div class="video-text">
+      <h1>Alina-Maria Barbuta’s Portfolio</h1>
+      <p>
+        <q>Code is my way of turning imagination into reality.</q><br><br>
+        Welcome to my portfolio — where I share my projects, experience, and passion for development.
+      </p>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section id="About" class="section">
+    <h2>About</h2>
+    <p>
+      I’m a full-stack developer passionate about creating clean, efficient, and modern web applications.
+      Balancing creativity and logic is my favorite part of coding.
+    </p>
+  </section>
+
+ <!-- GitHub -->
+<section id="GitHub" class="section dark">
+  <h2>My GitHub</h2>
+  <p>Check out my latest projects and code on GitHub:</p>
+
+  <div class="github-container">
+    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" 
+         alt="GitHub Logo" 
+         class="github-logo" />
+    <a href="https://github.com/alina91-star" 
+       target="_blank" 
+       class="github-button">Visit My GitHub Profile</a>
+  </div>
+</section>
+
+  <!-- Contact -->
+  <section id="Contact" class="section">
+    <h2>Contact</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Alina-Maria Barbuta | <a href="https://github.com/alina91-star" target="_blank">GitHub</a></p>
+  </footer>
+
+</body>
+</html>
