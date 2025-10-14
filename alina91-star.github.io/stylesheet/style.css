@@ -168,4 +168,43 @@ footer a:hover {
   .video-text p {
     font-size: 1rem;
   }
+}/* ===== GITHUB SECTION ===== */
+.github-container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
+
+.github-logo {
+  width: 80px;
+  height: 80px;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 0 8px rgba(87, 184, 255, 0.4));
+}
+
+.github-logo:hover {
+  transform: scale(1.1);
+}
+
+/* ===== GITHUB BUTTON ===== */
+.github-button {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #57b8ff;
+  color: #fff;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(87, 184, 255, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.github-button:hover {
+  background-color: #3793d9;
+  box-shadow: 0 6px 20px rgba(87, 184, 255, 0.45);
+  transform: translateY(-2px);
+}
+
