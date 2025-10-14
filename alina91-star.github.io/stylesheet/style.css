@@ -1,206 +1,171 @@
-/* -----------------------------
-   Alina-Maria Barbuta Portfolio
-   Clean, modern, responsive style
------------------------------- */
-
-/* General body styling */
-body.Background {
-    margin: 0;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
-    background-color: #f8f8f8;
+/* ===== GLOBAL RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Navbar styling */
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+/* ===== NAVBAR ===== */
 .Navbar {
-    overflow: hidden;
-    background-color: #2c2c2c;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px 0;
+  text-align: center;
+  z-index: 10;
 }
 
 .Navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 16px 20px;
-    text-decoration: none;
-    font-weight: 500;
-    letter-spacing: 0.5px;
+  color: #e0f4ff;
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-.Navbar a:hover {
-    background-color: #ddd;
-    color: #333;
-    transition: 0.3s;
-}
-
+.Navbar a:hover,
 .Navbar a.active {
-    background-color: #6a5acd;
-    color: white;
+  color: #57b8ff;
 }
 
-/* Video background section */
-#Typing_Video {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    filter: brightness(60%);
+/* ===== VIDEO BACKGROUND ===== */
+.video-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
 }
 
-/* Text over video */
-.Video_Text {
-    text-align: center;
-    padding-top: 200px;
-    color: white;
+#bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -2;
+  filter: brightness(70%) contrast(110%) saturate(115%);
 }
 
-.white-text {
-    color: white;
-    font-size: 48px;
-    font-weight: 600;
-    letter-spacing: 1px;
+.video-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 80, 160, 0.3); /* subtle blue overlay */
+  z-index: -1;
 }
 
-.center {
-    text-align: center;
-    font-size: 18px;
-    line-height: 1.6;
+/* ===== TEXT OVER VIDEO ===== */
+.video-text {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #eaf6ff;
+  padding: 0 2rem;
 }
 
-/* Content sections */
-.Row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 80px 10%;
-    background-color: white;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    border-radius: 10px;
+.video-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 15px rgba(0, 150, 255, 0.4);
 }
 
-.Column_1, .Column_2 {
-    flex: 50%;
-    padding: 40px;
+.video-text p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
-.Column_tall {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/* ===== SECTIONS ===== */
+.section {
+  padding: 100px 10%;
+  text-align: center;
+  background: #0b0b0b;
 }
 
-.Column_1 h1 {
-    font-size: 32px;
-    color: #6a5acd;
-    border-bottom: 2px solid #6a5acd;
-    display: inline-block;
-    margin-bottom: 20px;
+.section.dark {
+  background: #020202;
 }
 
-.Column_1 p {
-    font-size: 18px;
-    color: #555;
+.section h2 {
+  color: #9ed2ff;
+  margin-bottom: 20px;
 }
 
-/* Image styling */
-.Column_2 img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 12px;
-    display: block;
-    margin: 0 auto;
+.section p, .section a {
+  color: #dbefff;
+  line-height: 1.6;
+  text-decoration: none;
 }
 
-/* Contact form */
+/* ===== FORM ===== */
 form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
-label {
-    margin-top: 15px;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #444;
+input, textarea {
+  width: 80%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
-    padding: 12px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    font-family: inherit;
-    resize: none;
+button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 25px;
+  background-color: #57b8ff;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-textarea {
-    height: 120px;
+button:hover {
+  background-color: #3793d9;
 }
 
-input[type="submit"] {
-    margin-top: 20px;
-    background-color: #6a5acd;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 6px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-input[type="submit"]:hover {
-    background-color: #7b68ee;
-}
-
-/* Footer */
+/* ===== FOOTER ===== */
 footer {
-    background-color: #2c2c2c;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 60px;
-    font-size: 15px;
+  text-align: center;
+  padding: 20px;
+  background-color: #000;
+  color: #b8daff;
 }
 
 footer a {
-    color: #b4a0ff;
-    text-decoration: none;
+  color: #57b8ff;
 }
 
 footer a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-/* Responsive design */
-@media screen and (max-width: 768px) {
-    .Row {
-        flex-direction: column;
-        margin: 40px 5%;
-    }
-
-    .Column_1, .Column_2 {
-        flex: 100%;
-        text-align: center;
-    }
-
-    .Navbar a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-
-    .white-text {
-        font-size: 36px;
-    }
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .video-text h1 {
+    font-size: 2.2rem;
+  }
+  .video-text p {
+    font-size: 1rem;
+  }
 }
