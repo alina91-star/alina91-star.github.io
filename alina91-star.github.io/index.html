@@ -4,10 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width" />
   <title>Alina-Maria Barbuta</title>
-  <link rel="stylesheet" href="stylesheet/style.css">
+  <link rel="stylesheet" href="stylesheet/style.css" />
 </head>
 
 <body>
+
   <!-- Navbar -->
   <div class="Navbar">
     <a class="active" href="#Home">Home</a>
@@ -16,88 +17,56 @@
     <a href="#Contact">Contact</a>
   </div>
 
-  <!-- Video background -->
-  <div class="video-background" id="Home">
+  <!-- Background Video -->
+  <div class="video-container" id="Home">
     <video autoplay muted loop playsinline id="bg-video">
       <source src="video/background.mp4" type="video/mp4" />
       Your browser does not support HTML5 video.
     </video>
 
-    <div class="overlay-content">
+    <!-- Text Overlay -->
+    <div class="video-text">
       <h1>Alina-Maria Barbuta’s Portfolio</h1>
       <p>
-        <q>Code is my way of turning imagination into reality.</q>
-        <br><br>
-        My name is <strong>Alina-Maria Barbuta</strong>. Welcome to my portfolio website, where I share my background and experience as a developer.
-        <br><br>
-        Thank you for visiting and enjoy exploring my work!
+        <q>Code is my way of turning imagination into reality.</q><br><br>
+        Welcome to my portfolio — where I share my projects, experience, and passion for development.
       </p>
     </div>
   </div>
 
-  <!-- About section -->
-  <section class="Row" id="About">
-    <div class="Column_2">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML5 logo" />
-    </div>
-    <div class="Column_1">
-      <h1>About</h1>
-      <p>
-        I am a passionate software developer who loves to create beautiful and functional web applications.
-        <br><br>
-        I am also a proud mother of two wonderful children, which inspires me to balance creativity, patience, and problem-solving both in life and in code.
-        <br><br>
-        I graduated from <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a> Software Developer Boot Camp and I am trained in HTML, CSS, JavaScript, SQL, and C#.
-        <br><br>
-        I am a full-stack developer and would love to collaborate with you on your next project. <a href="#Contact">Contact me</a> below!
-      </p>
-    </div>
+  <!-- About -->
+  <section id="About" class="section">
+    <h2>About</h2>
+    <p>
+      I’m a full-stack developer passionate about creating clean, efficient, and modern web applications.
+      Balancing creativity and logic is my favorite part of coding.
+    </p>
   </section>
 
-  <!-- GitHub section -->
-  <section class="Row" id="GitHub">
-    <div class="Column_1">
-      <h1>GitHub</h1>
-      <p>
-        You can view my coding projects on my GitHub profile here:
-        <br><br>
-        <a href="https://github.com/alina91-star" target="_blank" class="btn">Visit my GitHub Profile</a>
-      </p>
-    </div>
-    <div class="Column_2">
-      <a href="https://github.com/alina91-star" target="_blank">
-        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" />
-      </a>
-    </div>
+  <!-- GitHub -->
+  <section id="GitHub" class="section dark">
+    <h2>GitHub</h2>
+    <p>
+      Check out my projects on
+      <a href="https://github.com/alina91-star" target="_blank">GitHub</a>.
+    </p>
   </section>
 
-  <!-- Contact section -->
-  <section class="Row" id="Contact">
-    <div class="Column_2 Column_tall">
-      <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Contact Icon" />
-    </div>
-    <div class="Column_1 Column_tall">
-      <h1>Contact</h1>
-      <form action="" method="POST">
-        <label>Name:</label>
-        <input type="text" name="Name" placeholder="Please enter your name here" required />
-
-        <label>Email:</label>
-        <input type="email" id="Email" name="Email" placeholder="Please enter your email here" required />
-
-        <label>Message:</label>
-        <textarea id="Message" name="Message" placeholder="Please write your message here" required></textarea>
-
-        <input type="submit" value="SUBMIT" />
-      </form>
-    </div>
+  <!-- Contact -->
+  <section id="Contact" class="section">
+    <h2>Contact</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p class="center">&copy; 2025 Alina-Maria Barbuta |
-      <a href="https://github.com/alina91-star" target="_blank">GitHub</a>
-    </p>
+    <p>&copy; 2025 Alina-Maria Barbuta | <a href="https://github.com/alina91-star" target="_blank">GitHub</a></p>
   </footer>
+
 </body>
 </html>
