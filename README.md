@@ -6,6 +6,7 @@ It showcases my skills in **HTML**, **CSS** and **JS**, and highlights my passio
 ## Features
 - Responsive design
 - About section
+- Slideshow
 - GitHub link
 - Linkedin link
 - Contact form
