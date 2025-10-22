@@ -1,210 +1,452 @@
-/* ===== GLOBAL RESET ===== */
+/* ===============================
+   GLOBAL STYLES
+   =============================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
-  width: 100%;
-  font-family: 'Poppins', sans-serif;
-  color: #fff;
   scroll-behavior: smooth;
 }
 
-/* ===== NAVBAR ===== */
-.Navbar {
+body {
+  font-family: "Avenir Next", Helvetica, sans-serif;
+  color: #fff;
+  background: #000;
+  overflow-x: hidden;
+}
+
+/* ===============================
+   BACKGROUND VIDEO
+   =============================== */
+#bg-video {
   position: fixed;
   top: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 15px 0;
-  text-align: center;
-  z-index: 10;
-}
-
-.Navbar a {
-  color: #e0f4ff;
-  text-decoration: none;
-  margin: 0 20px;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.Navbar a:hover,
-.Navbar a.active {
-  color: #57b8ff;
-}
-
-/* ===== VIDEO BACKGROUND ===== */
-.video-container {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
-#bg-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  left: 0;
   min-width: 100%;
   min-height: 100%;
-  transform: translate(-50%, -50%);
   object-fit: cover;
-  z-index: -2;
-  filter: brightness(70%) contrast(110%) saturate(115%);
+  z-index: -1;
+  filter: brightness(60%);
 }
 
-.video-container::after {
-  content: "";
-  position: absolute;
+/* ===============================
+   NAVIGATION BAR
+   =============================== */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: rgba(0, 80, 160, 0.3); /* subtle blue overlay */
-  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 15px 0;
+  z-index: 1000;
 }
 
-/* ===== TEXT OVER VIDEO ===== */
-.video-text {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 25px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
+
+/* ===============================
+   HERO SECTION
+   =============================== */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  color: #eaf6ff;
-  padding: 0 2rem;
+  padding: 80px 20px;
+  background: rgba(0, 0, 0, 0.5);
 }
 
-.video-text h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  text-shadow: 0 0 15px rgba(0, 150, 255, 0.4);
-}
-
-.video-text p {
-  font-size: 1.2rem;
+.hero-content {
   max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
+  animation: fadeInDown 2.5s ease-in-out;
 }
 
-/* ===== SECTIONS ===== */
+.hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero .quote {
+  font-style: italic;
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #ddd;
+}
+
+.hero .intro {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #f0f0f0;
+}
+
+/* Text animation */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   SECTIONS GENERAL
+   =============================== */
 .section {
-  padding: 100px 10%;
+  padding: 100px 20px;
   text-align: center;
-  background: #0b0b0b;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .section.dark {
-  background: #020202;
+  background: rgba(20, 20, 20, 0.8);
 }
 
 .section h2 {
-  color: #9ed2ff;
-  margin-bottom: 20px;
+  font-size: 28px;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-.section p, .section a {
-  color: #dbefff;
-  line-height: 1.6;
-  text-decoration: none;
+/* ===============================
+   SLIDESHOW STYLING
+   =============================== */
+.slideshow-container {
+  position: relative;
+  max-width: 900px;
+  margin: 50px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
-/* ===== FORM ===== */
-form {
+.slide {
+  display: none;
+  animation: fade 1.5s ease-in-out;
+}
+
+@keyframes fade {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.6s ease;
+  cursor: pointer;
+}
+
+/* Hover color effect */
+.slide img:hover {
+  filter: grayscale(0%);
+}
+
+/* Navigation buttons (on image) */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 14px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  transition: 0.3s ease;
+  user-select: none;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: translateY(-50%);
+}
+
+.next {
+  right: 10px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(255, 105, 180, 0.6);
+}
+
+/* Dots */
+.dots-container {
+  text-align: center;
+  padding-top: 15px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.active, .dot:hover {
+  background-color: #ff66b2;
+}
+
+/* Lightbox for full image view */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  padding-top: 80px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.lightbox-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 900px;
+  border-radius: 8px;
+  animation: zoomInEffect 0.6s ease;
+}
+
+/* Zoom animation for Lightbox */
+@keyframes zoomInEffect {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #ff66b2;
+}
+
+/* ===============================
+   ABOUT SECTION
+   =============================== */
+.about-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-}
-
-input, textarea {
-  width: 80%;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  background: rgba(255,255,255,0.1);
-  color: #fff;
-}
-
-button {
-  padding: 10px 25px;
-  border: none;
-  border-radius: 25px;
-  background-color: #57b8ff;
-  color: #fff;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-button:hover {
-  background-color: #3793d9;
-}
-
-/* ===== FOOTER ===== */
-footer {
+  justify-content: center;
+  gap: 30px;
   text-align: center;
-  padding: 20px;
-  background-color: #000;
-  color: #b8daff;
 }
 
-footer a {
-  color: #57b8ff;
+.about-img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  filter: grayscale(100%);
+  transition: filter 0.6s ease;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
-footer a:hover {
+.about-img:hover {
+  filter: grayscale(0%);
+}
+
+.about-text {
+  max-width: 800px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #ddd;
+}
+
+.about-text a {
+  color: #6ec1ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.about-text a:hover {
   text-decoration: underline;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .video-text h1 {
-    font-size: 2.2rem;
-  }
-  .video-text p {
-    font-size: 1rem;
-  }
-}/* ===== GITHUB SECTION ===== */
+/* ===============================
+   GITHUB SECTION
+   =============================== */
 .github-container {
-  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
 }
 
 .github-logo {
-  width: 80px;
-  height: 80px;
+  width: 90px;
   transition: transform 0.3s ease;
-  filter: drop-shadow(0 0 8px rgba(87, 184, 255, 0.4));
 }
 
 .github-logo:hover {
   transform: scale(1.1);
 }
 
-/* ===== GITHUB BUTTON ===== */
 .github-button {
-  display: inline-block;
-  padding: 12px 28px;
-  background-color: #57b8ff;
-  color: #fff;
-  border-radius: 30px;
-  font-weight: 600;
+  background: #fff;
+  color: #000;
+  padding: 12px 30px;
   text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(87, 184, 255, 0.3);
-  letter-spacing: 0.5px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
 }
 
 .github-button:hover {
-  background-color: #3793d9;
-  box-shadow: 0 6px 20px rgba(87, 184, 255, 0.45);
-  transform: translateY(-2px);
+  background: #ccc;
 }
 
+/* ===============================
+   CONTACT FORM
+   =============================== */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+form button {
+  background-color: #cc0070;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 16px;
+}
+
+form button:hover {
+  background-color: #ff4ba2;
+}
+
+/* ===============================
+   FIXED CONTACT BUTTON
+   =============================== */
+.contact-fixed {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #ff66b2;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+  z-index: 1200;
+}
+
+.contact-fixed:hover {
+  background: #ff0080;
+  transform: scale(1.1);
+}
+
+/* ===============================
+   FOOTER
+   =============================== */
+footer {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px 0;
+  color: #bbb;
+  font-size: 14px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+   =============================== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .section {
+    padding: 80px 15px;
+  }
+
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .prev, .next {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .lightbox-content {
+    width: 95%;
+  }
+}
