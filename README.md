@@ -1,7 +1,7 @@
 # Alina-Maria Barbuta – Portfolio Website
 
 This portfolio website was created as part of the Pitman Training Final Assignment.  
-It showcases my skills in **HTML** and **CSS**, and highlights my passion for web development and design.
+It showcases my skills in **HTML** and **CSS** **JS**, and highlights my passion for web development and design.
 
 ## Features
 - Responsive design
