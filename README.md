@@ -7,7 +7,7 @@ It showcases my skills in **HTML**, **CSS** and **JS**, and highlights my passio
 - Responsive design
 - About section
 - GitHub link
-- Linkendin link
+- Linkedin link
 - Contact form
 
 ## Live Website
