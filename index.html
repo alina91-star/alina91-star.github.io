@@ -1,78 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- =============================
+       Meta & Title
+       ============================= -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title>Alina-Maria Barbuta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alina-Maria Barbuta | Portfolio</title>
+
+  <!-- Styles -->
   <link rel="stylesheet" href="stylesheet/style.css" />
 </head>
-
 <body>
 
-  <!-- Navbar -->
-  <div class="Navbar">
-    <a class="active" href="#Home">Home</a>
-    <a href="#About">About</a>
-    <a href="#GitHub">GitHub</a>
-    <a href="#Contact">Contact</a>
-  </div>
+  <!-- =============================
+       Background Video (kept)
+       ============================= -->
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="video/background.mp4" type="video/mp4" />
+    Your browser does not support HTML5 video.
+  </video>
 
-  <!-- Background Video -->
-  <div class="video-container" id="Home">
-    <video autoplay muted loop playsinline id="bg-video">
-      <source src="video/background.mp4" type="video/mp4" />
-      Your browser does not support HTML5 video.
-    </video>
+  <!-- =============================
+       Header / Fixed Navigation
+       Matches the example structure/feel
+       ============================= -->
+  <header>
+    <nav class="navbar">
+      <div class="brand">
+        <span class="logo">Alina-Maria Barbuta</span>
+      </div>
 
-    <!-- Text Overlay -->
-    <div class="video-text">
-      <h1>Alina-Maria Barbuta’s Portfolio</h1>
-      <p>
-        <q>Code is my way of turning imagination into reality.</q><br><br>
-        Welcome to my portfolio — where I share my projects, experience, and passion for development.
-      </p>
+      <!-- Desktop navigation -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#slideshow">Slideshow</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#github">GitHub</a></li>
+      </ul>
+
+      <!-- Mobile hamburger -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+    </nav>
+  </header>
+
+  <!-- =============================
+       Home / Hero
+       Clean professional intro (no "I'm Alina")
+       ============================= -->
+  <section id="home" class="section home observe">
+    <div class="content card">
+      <h1>Welcome to my portfolio</h1>
+      <p>A collection of creative projects and web development experiments.</p>
+      <a href="#slideshow" class="btn">Explore More</a>
     </div>
-  </div>
-
-  <!-- About -->
-  <section id="About" class="section">
-    <h2>About</h2>
-    <p>
-      I’m a full-stack developer passionate about creating clean, efficient, and modern web applications.
-      Balancing creativity and logic is my favorite part of coding.
-    </p>
   </section>
 
- <!-- GitHub -->
-<section id="GitHub" class="section dark">
-  <h2>My GitHub</h2>
-  <p>Check out my latest projects and code on GitHub:</p>
+  <!-- =============================
+       About
+       Personalised: Amazon + mother of two
+       ============================= -->
+  <section id="about" class="section observe">
+    <h2>About Me</h2>
 
-  <div class="github-container">
-    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" 
-         alt="GitHub Logo" 
-         class="github-logo" />
-    <a href="https://github.com/alina91-star" 
-       target="_blank" 
-       class="github-button">Visit My GitHub Profile</a>
-  </div>
-</section>
+    <div class="about-wrap">
+      <!-- Your portrait (as requested, slide1.jpg is your photo) -->
+      <img
+        src="images/slide1.jpg"
+        alt="Portrait of Alina-Maria Barbuta"
+        class="about-photo"
+      />
 
-  <!-- Contact -->
-  <section id="Contact" class="section">
-    <h2>Contact</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+      <div class="about-text card">
+        <p>
+          I currently work at <strong>Amazon</strong>, where operating in a fast-paced,
+          highly structured environment has sharpened my <strong>organization</strong>,
+          <strong>attention to detail</strong>, and <strong>adaptability</strong>.
+          These strengths translate directly into my approach to building reliable,
+          user-friendly interfaces.
+        </p>
+        <p>
+          I’m also a proud <strong>mother of two</strong>. Balancing family life with
+          professional growth has taught me patience, focus, and clear prioritisation —
+          all of which help me write cleaner code and deliver better experiences.
+        </p>
+        <p>
+          Web development is where I combine creativity and logic to craft modern,
+          responsive, and accessible websites.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================
+       Slideshow
+       8 images, grayscale + fade, dots + prev/next
+       ============================= -->
+  <section id="slideshow" class="section observe">
+    <h2>Slideshow</h2>
+
+    <div class="slideshow-container">
+      <!-- Slides -->
+      <div class="slide"><img src="images/slide1.jpg" alt="Slide 1" /></div>
+      <div class="slide"><img src="images/slide2.jpg" alt="Slide 2" /></div>
+      <div class="slide"><img src="images/slide3.jpg" alt="Slide 3" /></div>
+      <div class="slide"><img src="images/slide4.jpg" alt="Slide 4" /></div>
+      <div class="slide"><img src="images/slide5.jpg" alt="Slide 5" /></div>
+      <div class="slide"><img src="images/slide6.jpg" alt="Slide 6" /></div>
+      <div class="slide"><img src="images/slide7.jpg" alt="Slide 7" /></div>
+      <div class="slide"><img src="images/slide8.jpg" alt="Slide 8" /></div>
+
+      <!-- Controls -->
+      <button class="prev" aria-label="Previous slide">❮</button>
+      <button class="next" aria-label="Next slide">❯</button>
+
+      <!-- Dots (pagination) -->
+      <div class="dots" aria-label="Slideshow indicators">
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+        <span class="dot" data-index="3"></span>
+        <span class="dot" data-index="4"></span>
+        <span class="dot" data-index="5"></span>
+        <span class="dot" data-index="6"></span>
+        <span class="dot" data-index="7"></span>
+        <span class="dot" data-index="8"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================
+       Contact
+       (basic client-side validation added in JS)
+       ============================= -->
+  <section id="contact" class="section observe">
+    <h2>Contact Me</h2>
+    <form id="contactForm" class="card" novalidate>
+      <input type="text" id="name" placeholder="Your Name" aria-label="Your Name" />
+      <input type="email" id="email" placeholder="Your Email" aria-label="Your Email" />
+      <textarea id="message" placeholder="Your Message" aria-label="Your Message"></textarea>
+      <button type="submit" class="btn">Send Message</button>
     </form>
   </section>
 
-  <!-- Footer -->
+  <!-- =============================
+       GitHub
+       (icon + button, jump target for nav)
+       ============================= -->
+  <section id="github" class="section observe">
+    <h2>GitHub</h2>
+
+    <p class="card">
+      You can view my work and projects on my GitHub profile.
+    </p>
+
+    <!-- Inline SVG icon so we don't depend on external CDNs -->
+    <a href="https://github.com/alina91-star" target="_blank" class="github-link" aria-label="Visit my GitHub">
+      <svg class="github-icon" viewBox="0 0 16 16" aria-hidden="true">
+        <path
+          fill="currentColor"
+          d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38
+          0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01
+          1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95
+          0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0
+          1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15
+          0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.01
+          8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z">
+        </path>
+      </svg>
+      <span>Visit My GitHub</span>
+    </a>
+  </section>
+
+  <!-- =============================
+       Back to Top (always on top)
+       ============================= -->
+  <button id="backToTop" aria-label="Back to top">↑</button>
+
+  <!-- =============================
+       Footer (year is set via JS)
+       ============================= -->
   <footer>
-    <p>&copy; 2025 Alina-Maria Barbuta | <a href="https://github.com/alina91-star" target="_blank">GitHub</a></p>
+    <p>© <span id="year"></span> Alina-Maria Barbuta | Web Developer</p>
   </footer>
 
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
 </body>
 </html>
